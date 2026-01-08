@@ -10,6 +10,16 @@ public class Gaulois {
 	}
 	
 	public String getNom() {
-		return nom;
+		return nom;	
+	}
+	
+	public void parler(String texte) {
+		System.out.println("Le gaulois " + nom + ": << " + texte + " >>." );
+	}
+	
+	public static void main(String[] args) {
+		Gaulois asterix = new Gaulois("Astérix",8);
+		System.out.println(asterix.getNom());
+		asterix.parler("Bonjour à tous");
 	}
 }
