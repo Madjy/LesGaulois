@@ -17,9 +17,9 @@ public class Gaulois {
 		System.out.println("Le gaulois " + nom + ": << " + texte + " >>." );
 	}
 	
-	public static void main(String[] args) {
-		Gaulois asterix = new Gaulois("Astérix",8);
-		System.out.println(asterix.getNom());
-		asterix.parler("Bonjour à tous");
+	public void frapper(Romain romain) {
+		System.out.println(nom + " envoie un grand coup dans la mâchoir de " + romain.getNom());
+        romain.recevoirCoup(force / 3);
 	}
 }
+
