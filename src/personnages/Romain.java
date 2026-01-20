@@ -18,12 +18,9 @@ public class Romain {
 	}
 	
 	public void recevoirCoup(int forceCoup) {
-		if (forceCoup > force) {
-			force = 0;
-		} else {
-			force -= forceCoup;
-		}
-		if (force < 1) {
+		force = force - forceCoup;
+		if (force<1) {
+			force=0;
 			parler("J'abandonne...");
 		} else {
 			parler("Aïe !");
