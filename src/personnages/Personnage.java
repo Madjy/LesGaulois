@@ -1,6 +1,6 @@
 package personnages;
 
-public class Personnage {
+public abstract class Personnage {
 	private String nom;
 	private int force;
 	
@@ -14,13 +14,15 @@ public class Personnage {
 	}
 	
 	public void parler(String texte) {
-		System.out.println(nom + ": << " + texte + " >>." );
+		System.out.println(donnerAuteur() + nom + ": << " + texte + " >>." );
 	}
 	
 	public void frapper(Personnage adversaire) {
-		System.out.println(nom + " envoie un grand coup dans la mâchoir de " + romain.getNom());
+		System.out.println(donnerAuteur() + nom + " envoie un grand coup dans la mâchoir de " + nom);
         adversaire.recevoirCoup(force / 3);
 	}
+	
+	protected abstract String donnerAuteur();
 	
 	public void recevoirCoup(int forceCoup) {
 		if (forceCoup > force) {
