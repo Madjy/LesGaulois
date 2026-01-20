@@ -18,7 +18,7 @@ public abstract class Personnage {
 	}
 	
 	public void frapper(Personnage adversaire) {
-		System.out.println(donnerAuteur() + nom + " envoie un grand coup dans la mâchoir de " + nom);
+		System.out.println(donnerAuteur() + nom + " envoie un grand coup dans la mâchoir de " + nom +".");
         adversaire.recevoirCoup(force / 3);
 	}
 	

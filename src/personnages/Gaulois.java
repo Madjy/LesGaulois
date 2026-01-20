@@ -7,7 +7,7 @@ public class Gaulois extends Personnage{
 
 	@Override
 	public String donnerAuteur() {
-		return "Le Gaulois";
+		return "Le Gaulois ";
 	}
 }
 

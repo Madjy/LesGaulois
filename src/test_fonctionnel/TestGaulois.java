@@ -7,10 +7,15 @@ public class TestGaulois {
 	public static void main(String[] args) {
 		Gaulois asterix = new Gaulois("Astérix", 8);
 		Romain minus = new Romain("Minus", 6);
+		
 		asterix.parler("Bonjour à tous");
 		minus.parler("UN GAU... UN GAUGAU...");
-		for (int i = 0; i < 3; i++) {
+		
+		for (int i = 0; i < 2; i++) {
 			asterix.frapper(minus);
+			minus.frapper(asterix);
 		}
+		
+		asterix.frapper(minus);
 	}
 }
