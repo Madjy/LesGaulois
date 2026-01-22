@@ -10,6 +10,7 @@ public class Camp {
 	
 	public Camp(Soldat commandant) {
 		this.commandant = commandant;
+		commandant.parler("Je suis en charge de créer un nouveau camp romain.");
 	}
 	
 	public Soldat getCommandant() {
@@ -19,16 +20,16 @@ public class Camp {
 	public void ajouterSoldat(Soldat nouveauSoldat) {
 		if (nbSoldats < membre.length) {
 			membre[nbSoldats] = nouveauSoldat;
-			nouveauSoldat.parler("Je mets mon épée au service de Rome dans le camp dirigé par " + commandant.getNom() + ".");
 			nbSoldats ++;
+			nouveauSoldat.parler("Je mets mon épée au service de Rome dans le camp dirigé par " + commandant.getNom() + ".");
 		} else {
 			commandant.parler("Désolé "+nouveauSoldat.getNom()+" notre camp est complet !");
 		}
 	}
 	
-	public void afficherCamp(Camp camp) {
-		System.out.println("Le camp dirigé par "+ camp.getCommandant().getNom()+" contient les soldats : ");
-		for (int i=0; i<camp.nbSoldats;i++) {
+	public void afficherCamp() {
+		System.out.println("Le camp dirigé par "+ commandant.getNom()+" contient les soldats : ");
+		for (int i=0; i<nbSoldats;i++) {
 			System.out.println("- "+membre[i].getNom());
 		}
 	}
