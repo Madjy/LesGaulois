@@ -1,5 +1,6 @@
 package sites;
 
+import java.util.Objects;
 import personnages.Gaulois;
 import personnages.Soldat;
 import personnages.Soldat.Grade;
@@ -40,7 +41,7 @@ public class Village {
 		chef.parler("Je laisse mon grand bouclier au grand " + nouveauChef.getNom());
 		chef = nouveauChef;
 		for (int i = 0; i < membre.length; i++) {
-			if (membre[i].getNom() == chef.getNom()) {
+			if (Objects.equals(membre[i].getNom(), chef.getNom())) {
 				membre[i] = null;
 			}
 		}

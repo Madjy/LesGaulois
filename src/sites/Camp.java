@@ -1,5 +1,6 @@
 package sites;
 
+import java.util.Objects;
 import personnages.Soldat;
 import personnages.Soldat.Grade;
 
@@ -38,7 +39,7 @@ public class Camp {
 		if (nouveauCommandant.getGrade()== Grade.CENTURION) {
 			commandant = nouveauCommandant;
 			for (int i=0; i<membre.length;i++) {
-				if (membre[i].getNom()==commandant.getNom()) {
+				if (Objects.equals(membre[i].getNom(), commandant.getNom())) {
 					membre[i]=null;
 					nbSoldats--;
 				}
